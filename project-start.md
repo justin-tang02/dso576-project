@@ -3,7 +3,7 @@
 ## Team and GitHub
 
 | Team name | GitHub repository |
-|---|---|
+|aa|---|
 | [Team name] | [Link to the team's private GitHub repository] |
 
 ## Selected project area
