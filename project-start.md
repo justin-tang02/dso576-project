@@ -3,8 +3,8 @@
 ## Team and GitHub
 
 | Team name | GitHub repository |
-|aa|---|
-| [Team name] | [Link to the team's private GitHub repository] |
+|---|---|
+| Music Discovery | https://github.com/justin-tang02/dso576-project |
 
 ## Selected project area
 
