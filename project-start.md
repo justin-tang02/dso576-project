@@ -4,7 +4,7 @@
 
 | Team name | GitHub repository |
 |---|---|
-| Music Discovery | https://github.com/justin-tang02/dso576-project |
+| Music Discovery (MD) | https://github.com/justin-tang02/dso576-project |
 
 ## Selected project area
 
