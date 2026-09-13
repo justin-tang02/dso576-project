@@ -4,7 +4,7 @@
 
 | Team name | GitHub repository |
 |---|---|
-| Music Discovery (MD) | https://github.com/justin-tang02/dso576-project |
+| Music Discovery (MD) - Leo, Jay, Justin, Ivy, Toby, Sizhou | https://github.com/justin-tang02/dso576-project |
 
 ## Selected project area
 
