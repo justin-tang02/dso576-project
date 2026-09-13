@@ -16,11 +16,11 @@ Our team is interested in this topic because music-streaming platforms need bett
 
 ## Candidate Vision A
 
-A music editorial lead at Spotify must decide which emerging artists should receive additional playlist and promotional exposure.
+A music editorial lead at Listenbrainz must decide which emerging artists should receive additional playlist and promotional exposure.
 
 ## Candidate Vision B
 
-An audience engagement strategist at Spotify must decide which listener segments should receive emerging-artist recommendations to maximize continued engagement.
+An audience engagement strategist at Listenbrainz must decide which listener segments should receive emerging-artist recommendations to maximize continued engagement.
 
 ## Side-by-side candidate assessment
 
