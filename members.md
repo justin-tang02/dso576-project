@@ -3,14 +3,14 @@
 Replace each placeholder with one GitHub username, without an `@` symbol.
 Keep one username per line and delete unused lines.
 
-github-username-1
+jay8lai
 
-github-username-2
+justin-tang02
 
-github-username-3
+leohbusiness
 
-github-username-4
+szwang-la
 
-github-username-5
+tobyzhou25
 
-github-username-6
+jialan0430
