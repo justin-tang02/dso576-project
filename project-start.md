@@ -27,18 +27,18 @@ An audience engagement strategist at a music-streaming platform must decide whic
 | Assessment | Vision A | Vision B |
 |---|---|---|
 | Evidence found so far | ListenBrainz listening histories can reveal audience growth, repeat listening, and catalog exploration. MusicBrainz provides artist, recording, and release metadata. | Complete listening histories can be used to group listeners by exploration, genre diversity, activity, and repeat-listening behavior. |
-| Core-data fit | Strong: the combined data can identify emerging artists and measure whether first-time listeners return or explore additional songs. | Partial—listening behavior supports behavioral segmentation, but the data may not include demographics or actual recommendation impressions. |
+| Core-data fit | Strong: the combined data can identify emerging artists and measure whether first-time listeners return or explore additional songs. | Partial: listening behavior supports behavioral segmentation, but the data may not include demographics or actual recommendation impressions. |
 | Biggest risk | Increased listening may result from outside promotion or viral attention, so the data cannot prove that editorial exposure caused the growth. | A listener’s first recorded play may not be their true discovery, and ListenBrainz users may not represent the wider streaming population. |
 
 ## Core data source we confirmed we can access
 
-[Source, original link, and what successfully opened.]
+The ListenBrainz data dumps successfully opened and provide complete submitted listening histories. The MusicBrainz database downloads also opened and provide the artist, recording, and release metadata needed to enrich those events.
 
 ## Three questions we still need to resolve
 
-1. [Question]
-2. [Question]
-3. [Question]
+1. How should we define an “emerging artist”—career age, listener count, growth rate, or a combination?
+2. What time period and retention measure should represent continued engagement?
+3. How will we select ListenBrainz users while reducing sampling bias and ensuring adequate listening histories?
 
 ## Role-file progress
 
