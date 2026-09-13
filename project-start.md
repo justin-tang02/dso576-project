@@ -8,27 +8,27 @@
 
 ## Selected project area
 
-[Area]
+Emerging Music Artist
 
 ## Why our team is interested in it
 
-[Write 2-3 sentences.]
+Our team is interested in this topic because music-streaming platforms need better ways to identify emerging artists who can build lasting audiences rather than generate only short-term attention. By analyzing listening histories and artist information, we can help editorial teams determine which artists deserve more exposure and which listener groups are most likely to remain engaged after discovering them.
 
 ## Candidate Vision A
 
-[Role] at [organization] must decide [decision].
+A music editorial lead at a music-streaming platform must decide which emerging artists should receive additional playlist and promotional exposure.
 
 ## Candidate Vision B
 
-[Role] at [organization] must decide [decision].
+An audience engagement strategist at a music-streaming platform must decide which listener segments should receive emerging-artist recommendations to maximize continued engagement.
 
 ## Side-by-side candidate assessment
 
 | Assessment | Vision A | Vision B |
 |---|---|---|
-| Evidence found so far | [Summarize the strongest verified evidence and link its original source.] | [Summarize the strongest verified evidence and link its original source.] |
-| Core-data fit | [Strong, partial, or weak—and one sentence explaining why.] | [Strong, partial, or weak—and one sentence explaining why.] |
-| Biggest risk | [What could prevent this Vision from supporting a useful, defensible decision?] | [What could prevent this Vision from supporting a useful, defensible decision?] |
+| Evidence found so far | ListenBrainz listening histories can reveal audience growth, repeat listening, and catalog exploration. MusicBrainz provides artist, recording, and release metadata. | Complete listening histories can be used to group listeners by exploration, genre diversity, activity, and repeat-listening behavior. |
+| Core-data fit | Strong: the combined data can identify emerging artists and measure whether first-time listeners return or explore additional songs. | Partial—listening behavior supports behavioral segmentation, but the data may not include demographics or actual recommendation impressions. |
+| Biggest risk | Increased listening may result from outside promotion or viral attention, so the data cannot prove that editorial exposure caused the growth. | A listener’s first recorded play may not be their true discovery, and ListenBrainz users may not represent the wider streaming population. |
 
 ## Core data source we confirmed we can access
 
