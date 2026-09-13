@@ -36,7 +36,7 @@ The ListenBrainz data dumps successfully opened and provide complete submitted l
 
 ## Three questions we still need to resolve
 
-1. How should we define an “emerging artist”—career age, listener count, growth rate, or a combination?
+1. How should we define an “emerging artist” (ex. career age, listener count, growth rate, or a combination)?
 2. What time period and retention measure should represent continued engagement?
 3. How will we select ListenBrainz users while reducing sampling bias and ensuring adequate listening histories?
 
