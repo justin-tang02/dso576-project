@@ -1,0 +1,28 @@
+source_row,user_id,user_name,listened_at,recording_msid,recording_mbid,artist_mbids,primary_artist_mbid,n_credited_artists,artist_name,artist_key,track_name,release_name,duration_ms,flag_key_conflict,flag_outside_month,flag_future,flag_bad_duration,flag_heavy_user
+1,39653,galen8183,2026-09-27T21:43:56Z,13a11b06-d55c-4eb3-a2d7-4121a15e788f,10d83f54-08bc-4812-a177-ebbdbf26f932,,,0,Radiator Hospital,radiator hospital,Are You Feeling Me?,Something Wild,112000.0,False,False,False,False,False
+2,93908,snowsuit3207,2026-09-28T00:00:02Z,a4167d77-26e9-47c7-9fa9-c7ba5fddc756,,0976dbd8-e7fe-4161-9a49-58c57f7a7787,0976dbd8-e7fe-4161-9a49-58c57f7a7787,1,League Of Legends • Rob Robinson,league of legends • rob robinson,Deceit,Sessions: Star Guardian Taliyah,186860.0,False,False,False,False,False
+3,30220,miasinterestinglife,2026-09-27T23:59:18Z,5439531a-db20-4aa8-9da4-0a15da0bb6f3,,,,0,Die drei ???,die drei ???,146 - Der Biss der Bestie - Teil 36,Die drei ??? 146: Der Biss der Bestie,87085.0,False,False,False,False,False
+4,137514,raspybxrry,2026-09-27T23:58:44Z,1ff57c3c-c771-40e3-9d62-37550202924a,,,,0,CORTIS,cortis,MOTION (feat. Juicy J),MOTION (feat. Juicy J) - Single,157361.0,False,False,False,False,False
+5,171240,dR3aMe1,2026-09-27T23:58:54Z,e98fbdba-4812-4445-b26b-a12089ecb91f,,,,0,.｡*ﾟ+.*.𝓒𝓾𝓻𝓻𝓮𝓷｡+..｡*ﾟ+,.｡*ﾟ+.*.𝓒𝓾𝓻𝓻𝓮𝓷｡+..｡*ﾟ+,worldwidesuperstar,Crown of Cuteness,128000.0,False,False,False,False,False
+6,41324,alessd,2026-09-27T23:21:13Z,0a298452-1e24-40cc-a48d-e89e737c9cfc,,,,0,"at first, at first","at first, at first",ballista,"Texas, Hold Me",,False,False,False,False,False
+7,41324,alessd,2026-09-27T23:17:14Z,69086163-42b2-487b-b17c-2fcb0a003611,,,,0,Trooper Salute,trooper salute,茶番,友達がいました,,False,False,False,False,False
+8,41324,alessd,2026-09-27T23:13:47Z,038803c4-4c2d-4d9b-b4ee-11037a5a2114,,,,0,kinoue64,kinoue64,sainou,Otona ni Naru,,False,False,False,False,False
+9,41324,alessd,2026-09-27T23:09:01Z,9e0eaca2-f678-4981-ba16-c6591b2dc1ce,,,,0,ひとひら,ひとひら,A Little Ghost,En,,False,False,False,False,False
+10,41324,alessd,2026-09-27T23:07:12Z,2e6525ca-6173-43c5-9b93-54acc00ffb0d,,,,0,PostmodernHippie,postmodernhippie,Dreadful Everyday,Dreadful Everyday,,False,False,False,False,False
+11,41324,alessd,2026-09-27T23:03:09Z,5feadce0-f112-4b4d-a1e6-9954654ef0ff,,,,0,Heaven in Her Arms,heaven in her arms,痣で埋まる,黒斑の侵蝕,,False,False,False,False,False
+12,41324,alessd,2026-09-27T22:58:45Z,05cbe9c0-d37f-4c0b-900c-eef770b8ec84,,,,0,Seventeen Years Old and Berlin Wall,seventeen years old and berlin wall,Prism,Reflect,,False,False,False,False,False
+13,41324,alessd,2026-09-27T22:54:46Z,ab151b5c-6b06-4de9-821e-7ec51fe04604,,,,0,Blurred City Lights,blurred city lights,Shukusai,Utopia,,False,False,False,False,False
+14,41324,alessd,2026-09-27T22:48:51Z,35ed6eed-ed8d-424c-b838-35962c97b10e,,,,0,kinoue64,kinoue64,nichijou shometsu,Nichijou Shometsu,,False,False,False,False,False
+15,41324,alessd,2026-09-27T22:44:21Z,cc9adb72-07c5-4afe-aa43-44da783dbbd0,,,,0,Parannoul,parannoul,Firebreak,Single Mind Worst Thought,,False,False,False,False,False
+16,41324,alessd,2026-09-27T22:41:01Z,8db8484d-a454-4c57-9a8f-9e2014b43c41,,,,0,Leto,leto,SOUTH2WEST,"Where REALITY exists, there must also be illusion. That's just the way the world is",,False,False,False,False,False
+17,41324,alessd,2026-09-27T21:48:55Z,d846fed9-e8b2-412c-b252-da3742b07838,,,,0,Heaven in Her Arms,heaven in her arms,赦された投身,白暈,,False,False,False,False,False
+18,41324,alessd,2026-09-27T19:20:09Z,20157e42-0d1a-4eec-9c32-4e8362cdd4f4,,,,0,futurina,futurina,Elephant,Uncertain future,,False,False,False,False,False
+19,158758,_sunshine_084,2026-09-27T23:58:43Z,fb260f08-3559-4ee2-bec8-bd474c589656,,,,0,BTS,bts,SWIM (Instrumental),KEEP SWIMMING,157000.0,False,False,False,False,False
+20,21003,afrocat,2026-09-27T23:39:29Z,18df5330-cc35-4ba9-a634-686a59f80768,,,,0,"G Jones, Eprom","g jones, eprom",By Your Side,Disk Utility,192814.0,False,False,False,False,False
+21,21003,afrocat,2026-09-27T23:36:16Z,81b9c492-ee30-4f83-b8d8-6b8460d460ee,,,,0,"G Jones, Eprom","g jones, eprom",1000 Cuts,Disk Utility,178101.0,False,False,False,False,False
+22,21003,afrocat,2026-09-27T23:33:18Z,4ce4813c-acaf-4af5-bd3d-bcbbeb853b42,,,,0,"G Jones, Eprom","g jones, eprom",Noontime Acid,Disk Utility,204466.0,False,False,False,False,False
+23,21003,afrocat,2026-09-27T23:29:53Z,da8481f3-abb2-4a1d-8c6f-54b095ba061f,,,,0,"G Jones, Eprom","g jones, eprom",Slamming Keys,Disk Utility,182728.0,False,False,False,False,False
+24,185709,Corallus,2026-09-27T23:58:32Z,dd1b6768-c4a6-41ea-91f8-64c0eb269b84,,,,0,BTS,bts,FYA,ARIRANG,181000.0,False,False,False,False,False
+25,76055,urmama,2026-09-27T23:58:52Z,2714edf5-1702-44c6-a1f7-db7dab1a5d71,,,,0,Pop Smoke,pop smoke,Mannequin (feat. Lil Tjay),Meet The Woo 2,161000.0,False,False,False,False,False
+26,33872,joqnix,2026-09-27T23:58:36Z,3daf11f9-66cd-493a-92f3-47e5fb6796dc,,,,0,理芽,理芽,閃光だった - INSIGHT,INSIGHT,217000.0,False,False,False,False,False
+28,192771,cotecine,2026-09-27T23:54:15Z,5bf14fd1-7027-4573-82dc-852e3241d956,,2c4ecb84-649b-4e55-aaae-bce404395a50,2c4ecb84-649b-4e55-aaae-bce404395a50,1,Rhian Sheehan,rhian sheehan,Elegy for the Past (We Are All Astronauts Remix),Elegy for the Past (We Are All Astronauts Remix),356000.0,False,False,False,False,False

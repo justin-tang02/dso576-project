@@ -1,0 +1,4 @@
+column,conversion,known,failed,source_seconds,source_milliseconds
+timestamp,Unix seconds to UTC ISO-8601,5022599,0,,
+duration,duration seconds to milliseconds or preserve duration_ms,2711476,0,,
+MBID fields,validate UUID shape and lowercase valid IDs,not separately typed,0,,

@@ -1,0 +1,7 @@
+step,rows
+input lines read,5022599
+rows missing user or timestamp,0
+exact duplicate rows removed,0
+future listens removed,0
+clean rows written,5022599
+rows needing review,4847510
