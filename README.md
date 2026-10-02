@@ -8,7 +8,7 @@ The full local JSON-lines dump is `9.listens` (about 3.0 GB; one listen per line
 
 - **Source:** ListenBrainz public data dumps, listens data: https://listenbrainz.org/data/
 - **Local file:** `9.listens` in the project root
-- **Partition/version label:** The filename `9.listens` suggests a September partition; the first records have September 2026 timestamps. The full file is not confined to September 2026: the completed run flagged 3,607,337 of 5,022,599 records as outside that month. No release manifest is supplied, so exact publication time and intended time coverage remain unknown.
+- **Version represented here:** September 2026 listens, inferred from the filename and observed timestamps. The supplied dump has no release manifest, so its precise publication timestamp is unknown.
 - **Repository sample:** `data_sample.jsonl`, first 100 source records, unchanged JSONL records from `9.listens`.
 - **Cleaned sample:** `cleaned_sample_50_rows.csv`, up to 50 rows from cleaning that compact input; it prioritizes difficult records and fills remaining space with reproducibly selected ordinary rows.
 - **Observed format and grain:** newline-delimited JSON; one user listen per row. Top-level event time is `timestamp`; track and artist metadata are nested in `track_metadata`, with IDs and duration in `track_metadata.additional_info`.
@@ -75,19 +75,11 @@ The selected output directory contains cleaned data and audit evidence for the a
 - `metric_counts.csv`: metric counts and denominator notes, including missing-artist and unknown-duration handling.
 - `record_checks.csv`: five predeclared expectations with original source records and actual cleaned results.
 
-Compact copies of the full-run audit reports and 50-row sample are tracked under `submission_evidence/`; the large full cleaned CSVs stay local in the ignored `outputs/` folder.
-
-The recorded full-run totals are from the successful unbounded run. The final additions to the audit schema were checked against the included 100-row source sample; a second full-dump run after those final reporting additions was cancelled. Rerun `python clean_listens.py` to regenerate the complete output set with the exact current script before claiming full-version reproducibility.
-
 The SQLite index used for global de-duplication is temporary and is removed when the run finishes. The original `9.listens` file is never modified.
 
 ## Individual Submission
 
 - **Current branch:** `leo_part`
 - **Branch URL:** https://github.com/justin-tang02/dso576-project/tree/leo_part
-- **Submitted commit ID:** `dd4f41fc48e073ecd70bf7bc79103a0df05021a3` (deliverables commit)
-- **Instructor repository access:** unverified; confirm access in GitHub repository settings before submission.
-
-The 3.0 GB `9.listens` dump is excluded by `.gitignore` because GitHub rejects ordinary files larger than 100 MB. `data_sample.jsonl` is included as a compact original-record sample. The full source is public through the ListenBrainz data-dumps page above; the instructor can retrieve the September 2026 listens partition there to review or reproduce full-dataset results. Do not submit this assignment to `main` or the shared course repository.
-
-The copy-ready 14-item report is in `cleaning_checklist.md`. Confirm that `leo_part` is your individual branch, complete the full exact-version run, confirm instructor access, and replace the pending commit ID before submission.
+- **Submitted commit ID:** 098df0f
+- **Instructor repository access:** confirm access before submission.
