@@ -85,7 +85,7 @@ The SQLite index used for global de-duplication is temporary and is removed when
 
 - **Current branch:** `leo_part`
 - **Branch URL:** https://github.com/justin-tang02/dso576-project/tree/leo_part
-- **Submitted commit ID:** [will be filled after the deliverables commit]
+- **Submitted commit ID:** `dd4f41fc48e073ecd70bf7bc79103a0df05021a3` (deliverables commit)
 - **Instructor repository access:** unverified; confirm access in GitHub repository settings before submission.
 
 The 3.0 GB `9.listens` dump is excluded by `.gitignore` because GitHub rejects ordinary files larger than 100 MB. `data_sample.jsonl` is included as a compact original-record sample. The full source is public through the ListenBrainz data-dumps page above; the instructor can retrieve the September 2026 listens partition there to review or reproduce full-dataset results. Do not submit this assignment to `main` or the shared course repository.

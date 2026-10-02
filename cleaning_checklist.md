@@ -133,7 +133,7 @@ Full-run evidence is copied into `submission_evidence/`; full-size data CSVs rem
 
 **Branch name:** `leo_part`  
 **Branch URL:** https://github.com/justin-tang02/dso576-project/tree/leo_part  
-**Submitted commit ID:** [will be filled after the deliverables commit]  
+**Submitted commit ID:** `dd4f41fc48e073ecd70bf7bc79103a0df05021a3` (deliverables commit)  
 **Instructor repository access:** Not verified; confirm the instructor has access in GitHub repository settings before submission.
 
 Do not submit this assignment to `main` or the shared course repository. The commit ID must identify the commit containing the submitted deliverables.
