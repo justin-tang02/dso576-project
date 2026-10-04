@@ -1,0 +1,12 @@
+[project]
+name = "dso576-music-discovery"
+version = "0.1.0"
+description = "Local analysis environment for the DSO 576 emerging music artist project"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "duckdb>=1,<2",
+    "ipykernel>=6,<8",
+    "nbformat>=5,<7",
+    "pandas>=2.2,<3",
+    "pyarrow>=19,<25",
+]

@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# Downloaded source dumps are local inputs, not project code.
+/listenbrainz-*-dump-*
+/9.listens
+/outputs/homework6_clean.parquet
+/outputs/homework6_preview.html
