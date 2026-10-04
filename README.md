@@ -21,4 +21,4 @@ The full cleaned table keeps all 5,022,599 source events. It standardizes outer 
 
 ## Submission details
 
-The PDF assignment also requires an individual Gradescope PDF and a push to an individual GitHub branch. The current local branch is `siz_datafit`. **Branch URL and submitted commit ID: pending commit/push.** Add those exact details to this README and the PDF after submission preparation. Do not commit the 3 GB raw source or the generated full Parquet.
+The PDF assignment also requires an individual Gradescope PDF and a push to an individual GitHub branch. **Branch:** `siz_datafit`. **Branch URL:** https://github.com/justin-tang02/dso576-project/tree/siz_datafit. **Submitted analysis commit ID:** `caa9c88daa7591a2d6021ca7be7db4ddec036358`. This commit contains the notebook, script, sample, dependencies, and initial README; the next documentation commit records its ID here. Use the same branch URL and analysis commit ID in the Gradescope PDF. Do not commit the 3 GB raw source or the generated full Parquet.
