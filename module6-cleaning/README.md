@@ -1,5 +1,11 @@
 # Module 6 Data Cleaning
 
+## GitHub Submission
+
+Branch name: `cleaning-ivy`  
+Branch URL: `https://github.com/justin-tang02/dso576-project/tree/cleaning-ivy`  
+Submitted work commit: `08b50cf`
+
 ## Cleaning Decision Log
 
 | Rule | Reason | Check |
