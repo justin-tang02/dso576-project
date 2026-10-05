@@ -1,0 +1,163 @@
+## 14-Item Cleaning Checklist
+
+### 1. State the project vision and question
+
+**Status:** Done
+
+**Evidence or explanation:**  
+The project supports a music editorial lead who needs to identify artists that may deserve additional playlist and promotional exposure. The main business question is: Which artists show the strongest audience growth and lasting listener engagement? Key metrics include unique listeners, 28-day listener growth, and lasting engagement rate.
+
+### 2. Define one row
+
+**Status:** Done
+
+**Evidence or explanation:**  
+One row represents one submitted listening event for one user at one timestamp. A candidate combination for identifying one listening event is `user_id + timestamp + recording_msid`.
+
+### 3. Preserve the source
+
+**Status:** Done
+
+**Evidence or explanation:**  
+Source: ListenBrainz incremental listens dump, archive `listenbrainz-listens-dump-2686-20260929-000003-incremental.tar.zip`. The original archive is stored outside the repository and is not modified. Cleaning scripts read from the original archive and write cleaned samples and outputs separately.
+
+### 4. Inspect columns and types
+
+**Status:** Done
+
+**Evidence or explanation:**  
+The core fields inspected were `user_id`, `timestamp`, `artist_name`, `track_name`, and `recording_msid`. In the inspection sample, `user_id` and `timestamp` were integer types, while artist, track, and recording identifiers were object/string-like fields. `timestamp` was converted to a UTC datetime in a new `listen_time` column rather than overwriting the original timestamp.
+
+### 5. Standardize text
+
+**Status:** Done
+
+**Evidence or explanation:**  
+The original `artist_name` and `track_name` values were preserved. Separate standardized keys were created using `.str.strip().str.lower()`:
+
+- `artist_key`
+- `track_key`
+
+For the full dataset, distinct artist labels decreased from 280,001 to 270,880 after standardization, a difference of 9,121 labels. Example capitalization variants included `!DelaDap` vs. `!deladap` and `$crim` vs. `$Crim`.
+
+Distinct track labels decreased from 722,720 to 674,920 after standardization, a difference of 47,800 labels. The standardized keys are used for text grouping/comparison while the original names are preserved.
+
+### 6. Investigate duplicates
+
+**Status:** Done
+
+**Evidence or explanation:**  
+The full dataset contained 0 duplicate candidate listening events when checking the combination `user_id + timestamp + recording_msid`.
+
+There were 3,688,434 repeated `recording_msid` values, but these were retained because the same recording can legitimately be played by multiple users or by the same user at different times.
+
+No listening events were removed as duplicates.
+
+### 7. Handle missing data
+
+**Status:** Done
+
+**Evidence or explanation:**  
+The full dataset contained 5,022,599 rows. No missing values were found in the five core fields checked:
+
+- `user_id`: 0
+- `timestamp`: 0
+- `artist_name`: 0
+- `track_name`: 0
+- `recording_msid`: 0
+
+Because these core fields had no missing values, no rows were filled or dropped for missingness.
+
+### 8. Check suspicious values
+
+**Status:** Done
+
+**Evidence or explanation:**  
+The full listening timestamp range was from 2005-02-13 23:55:46 UTC to 2026-09-28 23:56:23 UTC.
+
+The older timestamps were treated as unusual but not automatically invalid. They were retained because they may represent historical listens submitted or imported later. This wide time range is documented as a limitation because one incremental dump should not automatically be interpreted as complete listening coverage across the full 2005–2026 period.
+
+### 9. Verify merges
+
+**Status:** Not applicable
+
+**Evidence or explanation:**  
+No table merge was performed in this cleaning workflow. The source used for this assignment is one ListenBrainz listens extract, and the cleaning steps operated on fields from that extract only. Therefore, merge keys, unmatched rows, and merge-related row multiplication were not applicable to this version of the cleaning process.
+
+### 10. Reconcile changes
+
+**Status:** Done
+
+**Evidence or explanation:**  
+The full source contained 5,022,599 listening records. No rows were removed for missing values or duplicate candidate listening events.
+
+The cleaning process preserved the original rows and added derived fields such as:
+
+- `listen_time`
+- `artist_key`
+- `track_key`
+
+Therefore, the expected row count after cleaning remains 5,022,599 records for the full dataset. The submitted `cleaned_sample.csv` contains only 50 rows because it is a review sample, not the full cleaned dataset.
+
+### 11. Check calculations
+
+**Status:** Done
+
+**Evidence or explanation:**  
+No final audience-growth or lasting-engagement metrics were calculated as part of this cleaning assignment. For the core fields needed for later analysis, the full dataset had 5,022,599 records and 0 missing values in `user_id`, `timestamp`, `artist_name`, `track_name`, and `recording_msid`.
+
+Because these checked fields have no missing values, calculations based on these fields will not lose records due to missingness at this stage. Standardized grouping keys are created from nonmissing artist and track names. Any later metric will report its own numerator, denominator, and eligible record count before interpretation.
+
+### 12. Verify individual records
+
+**Status:** Done
+
+**Evidence or explanation:**  
+Five records were checked manually using original values, expected cleaned values, and actual cleaned values.
+
+The checks included:
+- artist-name standardization
+- track-name standardization
+- timestamp conversion to UTC datetime
+
+Examples included transformations such as:
+- `Radiator Hospital` → `radiator hospital`
+- `CORTIS` → `cortis`
+- `MOTION (feat. Juicy J)` → `motion (feat. juicy j)`
+
+All five checked records matched the expected results.
+
+The detailed record checks are saved in:
+`outputs/five_record_checks.csv`
+
+
+### 13. Test reproducibility
+
+**Status:** Done
+
+**Evidence or explanation:**  
+The project was rerun from the original ListenBrainz archive using the listed DSO 576 Python environment and dependencies.
+
+Scripts were run from the repository root in this order:
+
+```bash
+source /Users/mjl/dso576/.venv/bin/activate
+python module6-cleaning/full_inspections.py
+python module6-cleaning/duplicate_inspection.py
+python module6-cleaning/artist_name_inspection.py
+python module6-cleaning/track_name_inspection.py
+python module6-cleaning/create_clean_sample.py
+```
+
+### 14. Document remaining limitations
+
+**Status:** Done
+
+**Evidence or explanation:**  
+Several limitations remain:
+
+1. The source is an incremental ListenBrainz dump rather than a guaranteed complete history of all listening activity.
+2. Listening timestamps range from 2005-02-13 to 2026-09-28, so historical listens may have been submitted or imported later.
+3. Text-standardized `artist_key` and `track_key` values reduce capitalization differences but do not verify true artist or recording identity.
+4. Different artists can share the same name, and different recordings can share the same track title.
+5. The current cleaning workflow does not add artist release dates,so the project's full "emerging artist" eligibility definition cannot yet be verified from this source alone.
