@@ -1,0 +1,2 @@
+status,reason,rows_before,rows_after,unmatched_keys
+Not applicable,This cleaning workflow does not merge an external artist or recording table.,,,

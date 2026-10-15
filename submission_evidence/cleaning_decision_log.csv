@@ -1,0 +1,9 @@
+rule,reason,check
+Parse timestamp as Unix seconds and write UTC ISO-8601,ListenBrainz source records use a top-level Unix timestamp.,type_conversion_log.csv; record_checks.csv
+Trim text and collapse repeated whitespace; preserve display-name case,Remove formatting noise without changing intended artist or track names.,text_standardization_log.csv
+Convert duration seconds to milliseconds; keep duration_ms as provided,The sample contains both source representations.,type_conversion_log.csv; record_checks.csv
+Keep UUID-shaped MBIDs; store credited artist IDs as a pipe-separated list,IDs support later artist-level grouping; malformed IDs cannot join reliably.,listens_clean.csv; missing_value_audit.csv
+"Remove exact duplicates after normalization, but retain key conflicts and flag them",Exact repeated submissions add no event information; different payloads sharing the listen key may be distinct events.,duplicate_audit.csv; data_quality_flags.csv
+Drop rows without user_id or a parseable timestamp; leave other missing fields missing,"Those rows cannot be assigned to a listener or time period, while incomplete metadata can still represent a real listen.",missing_value_audit.csv; cleaning_summary.csv
+Remove future-dated listens; flag out-of-month and implausible durations,Future listens are impossible as of the run; other unusual values require review rather than automatic deletion.,data_quality_flags.csv; cleaning_summary.csv
+Flag users above the 99.5th percentile of retained listen counts,Heavy activity is unusual but not necessarily erroneous.,data_quality_flags.csv

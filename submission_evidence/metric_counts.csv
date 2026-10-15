@@ -1,0 +1,8 @@
+metric,records,denominator_or_note
+total cleaned listens,5022599,One row per retained listen event.
+listens with primary artist MBID,221440,Count of cleaned listen rows with a valid primary artist MBID.
+listens without primary artist MBID,4801159,Kept as an explicit missing-artist group.
+listens with valid known duration,2711160,"Nonmissing durations > 0 and <= 7,200,000 ms; implausible and missing values are excluded from time totals."
+distinct users,24625,Distinct user_id among cleaned listens.
+distinct artists by MBID,25124,Distinct nonmissing primary_artist_mbid; not distinct display names.
+valid known total listening time (hours),161891.784,"Sum of valid duration_ms divided by 3,600,000; missing and flagged durations excluded."

@@ -1,0 +1,12 @@
+column,missing_before,missing_after,handling
+user_id,0,0,Required for listener-level analysis; rows missing it are dropped.
+user_name,0,0,Retained as missing unless required user or timestamp is absent.
+listened_at,0,0,Required for time-based analysis; rows with invalid or missing timestamps are dropped.
+recording_msid,0,0,Retained as missing; listen may still be valid but cannot be recording-keyed.
+recording_mbid,4844752,4844752,Retained as missing; external recording enrichment is unavailable.
+artist_mbids,4801159,4801159,Retained as missing; artist name remains available when present.
+primary_artist_mbid,4801159,4801159,Retained as missing; row is included in review and the missing-artist group.
+artist_name,0,0,Retained as missing unless required user or timestamp is absent.
+track_name,0,0,Retained as missing unless required user or timestamp is absent.
+release_name,141030,141030,Retained as missing unless required user or timestamp is absent.
+duration_ms,2311123,2311123,Retained as missing; excluded from duration totals and averages.

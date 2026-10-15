@@ -1,0 +1,6 @@
+duplicate_type,count,handling
+exact normalized duplicate rows,0,Remove later copies; first source row is retained.
+rows participating in repeated listen keys,0,Keep; repeated user_id + listened_at + recording_msid can describe repeated submissions or plays.
+distinct repeated listen keys,0,Review separately from exact duplicates.
+rows in conflicting listen keys,0,Keep and flag because normalized content differs.
+conflicting listen keys,0,Keep and flag because normalized content differs.
