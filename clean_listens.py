@@ -14,6 +14,7 @@ import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterator, Optional
+from analysis.keys import normalize_key
 
 
 PROJECT_DIR = Path(__file__).resolve().parent
@@ -23,7 +24,7 @@ UUID_PATTERN = re.compile(r"^[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12
 FIELDS = [
     "source_row", "user_id", "user_name", "listened_at", "recording_msid",
     "recording_mbid", "artist_mbids", "primary_artist_mbid",
-    "n_credited_artists", "artist_name", "artist_key", "track_name",
+    "n_credited_artists", "artist_name", "artist_key", "track_name", "track_key",
     "release_name", "duration_ms", "flag_key_conflict", "flag_outside_month",
     "flag_future", "flag_bad_duration", "flag_heavy_user",
 ]
@@ -122,8 +123,9 @@ def normalize_record(source_row: int, record: dict[str, Any]) -> dict[str, Any]:
         "primary_artist_mbid": artist_ids[0] if artist_ids else None,
         "n_credited_artists": len(artist_ids),
         "artist_name": text_value(metadata.get("artist_name")),
-        "artist_key": (text_value(metadata.get("artist_name")) or "").casefold() or None,
+        "artist_key": normalize_key(metadata.get("artist_name")),
         "track_name": text_value(metadata.get("track_name")),
+        "track_key": normalize_key(metadata.get("track_name")),
         "release_name": text_value(metadata.get("release_name")),
         "duration_ms": duration,
     }
