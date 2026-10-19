@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-10-16T01:38:31+00:00",
+  "source_listens": "data/demo/listens.parquet",
+  "is_demo": true,
+  "analysis_config": {
+    "window_start": "2026-09-01",
+    "window_end": "2026-09-28",
+    "return_horizon_days": 7,
+    "early_period_days": 14,
+    "store_min_listeners": 2,
+    "segment_edges": [
+      50,
+      500
+    ]
+  },
+  "default_scoring": {
+    "min_listeners": 5,
+    "max_listeners": 200,
+    "min_eligible_new": 5,
+    "single_fan_share": 0.5,
+    "exclude_single_fan": true,
+    "weights": {
+      "new_listeners": 0.25,
+      "return_rate": 0.25,
+      "repeat_listener_rate": 0.25,
+      "growth_ratio": 0.25
+    }
+  },
+  "data_quality": {
+    "window_start": "2026-09-01",
+    "window_end": "2026-09-28",
+    "first_listen_utc": "2026-06-01T00:01:57+00:00",
+    "last_listen_utc": "2026-09-28T23:59:54+00:00",
+    "total_listens": 183575,
+    "window_listens": 112151,
+    "window_share": 0.6109274138635435,
+    "window_listeners": 1199,
+    "window_artists": 2460,
+    "window_non_artist_listens": 0,
+    "window_mbid_share": 0.04101613003896532,
+    "window_heavy_user_listen_share": 0.294041069629339,
+    "window_heavy_users": 6,
+    "multi_day_listener_share": 0.9966638865721434,
+    "retention_sufficient": true,
+    "last_eligible_discovery": "2026-09-21",
+    "artist_listeners_p50": 6.0,
+    "artist_listeners_p90": 21.0,
+    "artist_listeners_p99": 131.0,
+    "artist_listeners_max": 949
+  },
+  "row_counts": {
+    "artist_metrics": 4517,
+    "artist_weekly": 18068,
+    "entry_tracks": 15777,
+    "artist_segments": 10536,
+    "segment_users": 6,
+    "daily_coverage": 60
+  },
+  "build_seconds": 0.9
+}
