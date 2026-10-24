@@ -1,4 +1,4 @@
-﻿# Jay Lai — Emerging Artists Discoveryt Data Cleaning
+# Jay Lai — Emerging Artists Discoveryt Data Cleaning
 
 ## Data source
 ListenBrainz incremental listens dump:
@@ -110,3 +110,7 @@ The SQLite index used for global de-duplication is temporary and is removed when
 - **Branch URL:** https://github.com/justin-tang02/dso576-project/tree/leo_part
 - **Submitted commit ID:** 098df0f
 - **Instructor repository access:** confirm access before submission.
+
+## Emerging Artist Exposure dashboard
+
+See [app/README.md](app/README.md) for local setup, launch instructions, data selection, and dashboard acceptance checks. The app uses the existing aggregate tables only.

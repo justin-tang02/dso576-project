@@ -1,0 +1,1 @@
+"""Independent dashboard views."""

@@ -3,3 +3,5 @@
 __pycache__/
 9.listens
 outputs/
+.pytest_cache/
+pytest-cache-files-*/
