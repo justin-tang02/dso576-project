@@ -6,6 +6,8 @@ rank calls) to rerun on every dashboard control change. Nothing here reads files
 
 from __future__ import annotations
 
+import math
+
 import pandas as pd
 
 from .config import ScoringParams
@@ -39,9 +41,13 @@ def normalized_weights(params: ScoringParams) -> dict[str, float]:
     if unknown:
         raise ValueError(f"unknown score components: {sorted(unknown)}")
     weights = {name: float(params.weights.get(name, 0.0)) for name in SCORE_COMPONENTS}
+    if any(not math.isfinite(w) for w in weights.values()):
+        raise ValueError("weights must be finite")
     if any(w < 0 for w in weights.values()):
         raise ValueError("weights must be non-negative")
     total = sum(weights.values())
+    if not math.isfinite(total):
+        raise ValueError("weight total must be finite")
     if total == 0:
         raise ValueError("at least one weight must be positive")
     return {name: w / total for name, w in weights.items()}
@@ -81,8 +87,10 @@ def score_artists(metrics: pd.DataFrame, params: ScoringParams) -> pd.DataFrame:
 
 def shortlist(scored: pd.DataFrame, top_n: int | None = None) -> pd.DataFrame:
     """Shortlisted rows of ``score_artists`` output, ordered by rank."""
+    if top_n is not None and top_n < 0:
+        raise ValueError("top_n must be non-negative")
     rows = scored.loc[scored["shortlisted"]].sort_values("rank", kind="stable")
-    return rows.head(top_n) if top_n else rows
+    return rows if top_n is None else rows.head(top_n)
 
 
 def status_counts(scored: pd.DataFrame) -> pd.DataFrame:
