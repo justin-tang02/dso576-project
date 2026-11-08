@@ -19,3 +19,7 @@ downloads/
 # Local operating-system files.
 .DS_Store
 Thumbs.db
+
+# Python-generated files
+__pycache__/
+*.pyc
