@@ -168,6 +168,45 @@ def test_status_and_score():
         scoring.score_artists(metrics_frame(), ScoringParams(weights={"new_listeners": 0}))
 
 
+@pytest.mark.parametrize("weight", [float("nan"), float("inf"), float("-inf")])
+def test_normalized_weights_rejects_nonfinite_values(weight):
+    with pytest.raises(ValueError, match="weights must be finite"):
+        scoring.normalized_weights(ScoringParams(weights={"new_listeners": weight}))
+
+
+def test_normalized_weights_rejects_nonfinite_total():
+    weights = {"new_listeners": 1e308, "return_rate": 1e308}
+    with pytest.raises(ValueError, match="weight total must be finite"):
+        scoring.normalized_weights(ScoringParams(weights=weights))
+
+
+def test_normalized_weights_preserves_valid_normalization():
+    assert scoring.normalized_weights(ScoringParams()) == {
+        name: 0.25 for name in scoring.SCORE_COMPONENTS
+    }
+    weights = {"new_listeners": 2, "return_rate": 1, "repeat_listener_rate": 1}
+    assert scoring.normalized_weights(ScoringParams(weights=weights)) == {
+        "new_listeners": 0.5, "return_rate": 0.25,
+        "repeat_listener_rate": 0.25, "growth_ratio": 0.0,
+    }
+
+
+@pytest.mark.parametrize("top_n, expected", [
+    (None, ["c2", "c1"]), (0, []), (1, ["c2"]), (10, ["c2", "c1"]),
+])
+def test_shortlist_limits(top_n, expected):
+    scored = scoring.score_artists(metrics_frame(), ScoringParams())
+    result = scoring.shortlist(scored, top_n=top_n)
+    assert result["artist_key"].tolist() == expected
+    assert result.columns.tolist() == scored.columns.tolist()
+
+
+def test_shortlist_rejects_negative_limit():
+    scored = scoring.score_artists(metrics_frame(), ScoringParams())
+    with pytest.raises(ValueError, match="top_n must be non-negative"):
+        scoring.shortlist(scored, top_n=-1)
+
+
 def test_cleaner_on_repository_sample(tmp_path):
     subprocess.run([sys.executable, str(ROOT / "clean_listens.py"), "--input", str(ROOT / "data_sample.jsonl"),
                     "--output-dir", str(tmp_path)], check=True, cwd=ROOT, capture_output=True)
